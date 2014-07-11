@@ -34,8 +34,11 @@ Context managers for use with the ``with`` statement.
 """
 
 from contextlib import contextmanager
-from contextlib2 import ExitStack
 import sys
+if sys.version_info < (3, 0):
+    from contextlib2 import ExitStack
+else:
+    from contextlib import ExitStack
 import socket
 import select
 
