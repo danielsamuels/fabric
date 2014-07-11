@@ -738,6 +738,7 @@ class TestFileTransfers(FabricTest):
     #
     # put()
     #
+
     @server()
     def test_put_file_to_existing_directory(self):
         """
@@ -880,9 +881,11 @@ class TestFileTransfers(FabricTest):
             get('/foo[bar].txt', local2)
         eq_contents(local2, text)
 
+
     #
     # Interactions with cd()
     #
+
     @server()
     @contextmanager
     def test_cd_should_apply_to_put(self):
