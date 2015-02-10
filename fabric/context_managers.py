@@ -35,7 +35,7 @@ Context managers for use with the ``with`` statement.
 
 from contextlib import contextmanager
 import sys
-if sys.version_info < (3, 0):
+if sys.version_info < (3, 3):
     from contextlib2 import ExitStack
 else:
     from contextlib import ExitStack
