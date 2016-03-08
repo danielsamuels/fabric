@@ -217,10 +217,6 @@ def prompt(text, key=None, default='', validate=None):
     value = None
     while value is None:
         # Get input
-        try:
-            input = raw_input
-        except NameError:
-            pass
         value = input(prompt_str) or default
         # Handle validation
         if validate:
